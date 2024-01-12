@@ -1,0 +1,26 @@
+{
+  "name": "example-builtin-swc-loader",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "rspack serve",
+    "build": "rspack build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@rspack/cli": "latest",
+    "@rspack/core": "latest",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-refresh": "0.14.0",
+    "suneditor": "^2.45.1"
+  },
+  "devDependencies": {
+    "@rspack/core": "latest",
+    "@swc/helpers": "0.5.1"
+  }
+}
