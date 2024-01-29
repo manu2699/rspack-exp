@@ -40,7 +40,7 @@ module.exports = {
   },
   plugins: [
     new rspack.container.ModuleFederationPlugin({
-      name: "mfeCCC",
+      name: "lib2",
       exposes: {
         "./Component": "./src/Component",
         "./Component2": "./src/LazyComponent",

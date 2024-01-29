@@ -1,6 +1,7 @@
 {
-  "name": "example-module-federation-v1.5-lib2",
+  "name": "lib2",
   "version": "1.0.0",
+  "homepage": "/static/lib2/web/{buildNumber}",
   "description": "",
   "main": "index.js",
   "private": true,
@@ -12,6 +13,10 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "exports": {
+    "./Component": "./src/Component",
+    "./Component2": "./src/LazyComponent"
+  },
   "dependencies": {
     "date-fns": "^3.0.6",
     "lodash": "^4.17.21",

@@ -1,8 +1,8 @@
 import React from "react";
 import { formatRelative, subDays } from "date-fns";
 
-const Component = ({ locale }) => (
-	<div style={{ border: "5px solid darkred" }}>
+export const Component = ({ locale }) => (
+	<div style={{ border: "5px solid darkred", marginBlock: "20px" }}>
 		<p>I'm a Component exposed from container C!</p>
 		<p>
 			Using date-fn in Remote:{" "}
@@ -10,4 +10,3 @@ const Component = ({ locale }) => (
 		</p>
 	</div>
 );
-export default Component;
