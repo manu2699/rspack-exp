@@ -42,11 +42,11 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       // exclude container entry from html, to use the correct HMR handler
-      excludeChunks: ['mfeBBB']
+      excludeChunks: ['lib1']
     }),
     new rspack.container.ModuleFederationPlugin({
       // A unique name
-      name: "mfeBBB",
+      name: "lib1",
       // List of exposed modules
       exposes: {
         "./Component": "./src/Component",

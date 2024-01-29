@@ -1,17 +1,21 @@
 {
-  "name": "example-module-federation-v1.5-app",
+  "name": "lib1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "/static/lib1/web/{buildNumber}",
   "private": true,
   "scripts": {
     "dev": "rspack serve",
     "build": "cross-env NODE_ENV=production rspack build",
-    "start": "serve ./dist -p 8080"
+    "start": "serve ./dist -p 8081"
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
+  "exports": {
+    "./Component": "./src/Component"
+  },
   "dependencies": {
     "date-fns": "^3.0.6",
     "react": "18.0.0",

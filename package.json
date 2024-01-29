@@ -9,6 +9,12 @@
     "build": "pnpm --filter \"example-module-federation-v1.5-*\" build",
     "start": "pnpm --filter \"example-module-federation-v1.5-*\" start"
   },
+  "dependencies": {
+    "html-webpack-plugin": "5.3.2",
+    "fs-extra": "10.0.0",
+    "@rspack/core": "0.5.0",
+    "chalk": "4.1.2"
+  },
   "keywords": [],
   "author": "",
   "license": "MIT"
