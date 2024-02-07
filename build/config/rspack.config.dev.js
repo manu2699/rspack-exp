@@ -5,6 +5,7 @@ import rspack from "@rspack/core";
 
 import paths from "./paths.js";
 import { getRemoteWithDependencies } from "./promise.federation.js";
+import { getClientEnvironment } from "./env.js";
 
 const packageJson = paths.appPackageJson;
 const publicPath = paths.servedPath;
@@ -18,8 +19,10 @@ const alias = {
 	[`@${packageJson.name}`]: paths.appSrc
 };
 
+const env = getClientEnvironment(publicUrl, kind);
+
 export default {
-	mode: "development",
+	mode: "none",
 	devtool: "eval-source-map",
 
 	entry: {
@@ -105,6 +108,7 @@ export default {
 			filename: `${assertPath}/index.html`,
 			template: paths.appHtml,
 			chunks: ["app"]
-		})
+		}),
+		new rspack.DefinePlugin(env.stringified)
 	]
 };

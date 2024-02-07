@@ -10,10 +10,13 @@
     "start": "pnpm --filter \"example-module-federation-v1.5-*\" start"
   },
   "dependencies": {
-    "html-webpack-plugin": "5.3.2",
-    "fs-extra": "10.0.0",
     "@rspack/core": "0.5.0",
-    "chalk": "4.1.2"
+    "chalk": "4.1.2",
+    "dotenv": "^16.4.1",
+    "fs-extra": "10.0.0",
+    "html-webpack-plugin": "5.3.2",
+    "http-proxy-middleware": "^2.0.6",
+    "serve-handler": "^6.1.5"
   },
   "keywords": [],
   "author": "",

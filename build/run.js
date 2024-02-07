@@ -3,9 +3,14 @@ import { exec, execSync } from "child_process";
 import fs from "fs-extra";
 
 import { parseArgs, getServices } from "./utils.js";
+import { startLocalServer } from "./localserver.js";
 
 const args = parseArgs(process.argv);
 let currentlyRunningBuild = {};
+
+process.env.BROWSER = "none";
+process.env.BABEL_ENV = "development";
+process.env.NODE_ENV = "development";
 
 const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
@@ -36,6 +41,10 @@ async function start() {
 		const chunk = servicesToRun.slice(i, i + CHUNK_SIZE);
 		await processChunks(chunk); // Process the current chunk concurrently
 	}
+
+	console.log("Build Completed");
+
+	startLocalServer();
 }
 
 function triggerBuild(service, kind = "web") {

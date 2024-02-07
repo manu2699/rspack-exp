@@ -13,7 +13,7 @@ export const getRemoteWithDependencies = (packageJson, kind) => {
         let packageName = "${packageName}"
         let remote = "${remote}"
         let kind = "${kind}"
-        let versionNumber = window.dependent_versionNumber[remote]
+        let versionNumber = "_"
         let scriptId = remote+versionNumber
         const existingScript = document.getElementById(scriptId);
 

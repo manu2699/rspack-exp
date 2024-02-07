@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// Ensure environment variables are read.
+import "./../config/env.js";
+
 import rspack from "@rspack/core";
 import chalk from "chalk";
 
@@ -8,7 +11,11 @@ import chalk from "chalk";
 // import printBuildError from "react-dev-utils/printBuildError.js";
 
 import config from "../config/rspack.config.dev.js";
-import paths from "../config/paths.js";
+
+process.on("unhandledRejection", (err) => {
+	throw err;
+});
+
 
 function startToBuild(onBuildSuccessCb = () => {}) {
 	// const packageJson = paths.appPackageJson;
